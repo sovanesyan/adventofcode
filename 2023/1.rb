@@ -6,9 +6,10 @@ p l.map { |x| x.chars.filter { _1 == _1.to_i.to_s } }
  .sum
 
 
-numbers = { 'one' => 'o1o', 'two' => 't2t', 'three' => 't3t', 'four' => 'f4f',
-            'five' => 'f5f', 'six' => 's6s', 'seven' => 's', 'eight' => "e8e",
-            'nine' => 'n9n', 'zero' => 'z0z'
+numbers = { 
+  'one' => 'one1one', 'two' => 'two2two', 'three' => 'three3three', 'four' => 'four4four',
+  'five' => 'five5five', 'six' => 'six6six', 'seven' => 'seven7seven', 'eight' => "eight8eight",
+  'nine' => 'nine9nine'
 }
 
 l2 = File.read('1.input').split("\n")
