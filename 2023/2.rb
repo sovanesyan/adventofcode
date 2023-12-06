@@ -12,18 +12,8 @@ games = File.read('2.input').split("\n")
 
 bag = { :r => 12, :g => 13, :b => 14, }
 
-filtered = games.
-  filter do |game, reveal| 
-    reveal.all? do |x| 
-      [:r, :b, :g].all? { |color| x[color] <= bag[color]}
-    end
-  end
+p games.filter { |_, r| r.all? { |x| [:r, :b, :g].all? { x[_1] <= bag[_1]} }}.keys.sum
+p games.map { |_, r| [:r, :g, :b].map { |c| r.map { _1[c] }.max }.reduce(:*) }.sum
+  
 
-p filtered.keys.sum
-
-powers = games.map do |game, reveals|
-  [:r, :g, :b].map { |color| reveals.map { _1[color] }.max }.reduce(:*)
-end
-
-p powers.sum
   
