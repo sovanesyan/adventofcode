@@ -14,7 +14,7 @@ numbers = {
 
 l2 = File.read('1.input').split("\n")
 
-p res =l2.map do |x|  
+p res = l2.map do |x|  
   numbers.each { |k, v| p x.gsub!(k, v) }
 end
 
